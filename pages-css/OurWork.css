@@ -1,0 +1,171 @@
+/* General Styles */
+body {
+    margin: 0;
+    margin-top: 74px; /* Ensure the header does not overlap the content */
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #6554ff;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-height : 50px;
+    z-index: 1000; /* Ensure the header is above other elements */
+}
+
+.nav-links {
+    white-space: nowrap;
+    padding-right: 40px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links :hover {
+    color: #ff7f00;
+    background-color: #ffffff;
+    border-radius: 5%;
+    box-shadow: #5300c8 2px 2px 2px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 100%;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+#menu-button {
+    background: none;
+    color: #ffffff;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0;
+    padding: 20px; /* Increased padding from 0 */
+    line-height: 0.5;
+    transition: transform 0.3s ease-in-out;
+}
+
+#menu-button:hover {
+    color: #ff7f00;
+    background-color: none;
+    box-shadow: none;
+}
+
+#menu-button.rotate {
+    transform: rotate(180deg) scale(1.3);
+}
+
+/* Expanded Menu Styles */
+.expanded-menu {
+    position: absolute;
+    top: 100%; /* Position below the header */
+    right: 0;
+    width: 400px;
+    background-color: #6554ff;
+    padding: 5px;
+    padding-right: 65px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* Initial State (Hidden) */
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Final State (Visible) */
+.expanded-menu.active {
+    max-height: 300px;
+    width: 500px;
+    opacity: 1;
+    transform: translateX(0); /* Reset position */
+}
+
+.expanded-menu ul {
+    list-style: none;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.expanded-menu ul li {
+    padding-left: 20px;
+    padding: 5px;
+    font-size: 150%;
+    margin: 10px 0;
+    border-bottom: 1px solid #9589ff;
+}
+
+.expanded-menu ul li:hover {
+    background-color: #3326ab;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.expanded-menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.expanded-menu ul li:hover a {
+    transition: background-color 0.3s ease-in-out;
+    color: #ff7f00;
+}
+
+.about-us {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-us h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.about-us h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-us button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.social-media {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+}
